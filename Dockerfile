@@ -1,6 +1,6 @@
-FROM python:3.7-slim-buster
+FROM python:3.11-slim-bookworm
 
-RUN apt update -y && apt install awscli -y
+RUN pip install --no-cache-dir awscli
 WORKDIR /app
 
 COPY . /app
